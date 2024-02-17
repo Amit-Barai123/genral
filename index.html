@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Micro+5&family=Protest+Strike&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: roboto;
+        }
+
+        :root {
+            ---bs-dark-color: #1a1d20;
+            --bs-dark-primary: #1c1c1c;
+            --bs-main-color: #fff;
+            --bs-primary-color: #c6c6c6;
+            --secondary-color: #29a9fd;
+            --bs-supporting-color: #C850C0;
+
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--bs-main-color)
+        }
+
+        .nav-link {
+            color: var(--bs-primary-color);
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-link {
+
+            font-size: 1rem;
+            margin-right: 2rem;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .hero-section h1::first-letter {
+            font-size: 5rem;
+            initial-letter: 2.1;
+
+            color: var(--secondary-color)
+        }
+
+        .btn-success {
+            background-color: var(--secondary-color);
+            width: 10rem;
+
+        }
+
+        .bg-main {
+            background-color: var(--bs-dark-primary);
+            height: min-content;
+            position: relative;
+            padding-bottom: 7rem;
+        }
+
+        .custom-shape-divider-bottom-1708146056 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1708146056 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .custom-shape-divider-bottom-1708146056 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        h2 {
+            color: var(--bs-dark-primary);
+            text-align: center;
+            font-size: 3rem;
+            text-transform: capitalize;
+            margin-top: 3rem;
+
+        }
+
+        hr {
+            height: 12px;
+
+        }
+
+        .bi-arrow-right {
+            background-color: var(--bs-supporting-color);
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 2rem;
+            text-align: center;
+        }
+
+        .background-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.805), rgba(0, 0, 0, 0.799)), url("public/images/Capture-2.JPG");
+            background-size: cover;
+            background-position: center;
+            height: min-content;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        #product-h3 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+
+        }
+
+        #product-btn {
+            margin-top: 1rem;
+            width: 15rem;
+        }
+
+        p {
+            color: var(--bs-primary-color);
+        }
+
+        .carousel-indicators {
+            position: relative;
+        }
+
+        .carousel-indicators button[type="button"] {
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--bs-supporting-color);
+        }
+
+        .curve-background {
+            background-color: var(---bs-dark-color);
+            position: relative;
+
+        }
+
+        .custom-shape-divider-top-1708171011 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-top-1708171011 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 38px;
+        }
+
+        .custom-shape-divider-top-1708171011 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        @media (min-width:700px) and (max-width:1000px) {
+            .video {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .first-heading {
+                display: flex;
+                justify-content: center;
+                font-size: 4rem;
+                margin-top: 2rem;
+            }
+
+            
+            .card-item-1 {
+                margin-bottom: 3rem;
+            }
+
+            .second-section {
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            .background-section {
+                height: min-content;
+                padding: 3rem;
+            }
+
+            .text-center-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .phone-img {
+                
+               height:100%;
+               width:100%;
+            }
+           
+        }
+        @media (max-width:699px) {
+            .first-heading {
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                margin-top: 1.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .text-center-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .phone-img {
+                
+               height:100%;
+               width:100%;
+            }
+
+            .center-img {
+                text-align: center;
+            }
+            #product-h3 {
+            font-size: 1.5rem;
+            }
+            #product-btn {
+                margin-bottom: 2rem;
+            }
+            .footer-class {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .bg-main {
+            padding-bottom: 3rem;
+            }
+
+        }
+            
+            
+
+
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-main  text-white">
+
+        <nav class="navbar  text-white  navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand " href="#">Amit Barai</a>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact-us</a>
+                        </li>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <section class="hero-section  container my-5 m-auto row ">
+            <div class="d-flex  text-start flex-column  col-lg-6 order-1 order-lg-0 ">
+                <h1 class="first-heading mb-5">We Collect High<br> Quality Leads</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.
+
+                </p>
+                <div class="text-center w-100 text-md-center text-lg-start">
+                    <button class="btn b btn-success my-3 ">contact-us</button>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-sm-center text-lg-end text-md-center "><video
+                    class="rounded-4 me-auto " src="public/images/hero.mp4" autoplay loop muted autoplay
+                    width="80%"></video> </div>
+
+        </section>
+        <div class="custom-shape-divider-bottom-1708146056">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+
+    </header>
+    <section class="second-section container my-5">
+        <h2>What we will do for <br> your bussiness</h2>
+        <hr class="w-25 mx-auto">
+        <div class="row  card-row-1">
+            <div class="card-item-1 col-sm-12 col-md-6 col-xl-4 col-12">
+                <div class="card  m-md-0 m-5">
+                    <div class="card-header">
+                        <img src="public/images/link.gif" width="100%">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Link Building</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam
+                            temporibus assumenda tempora maxime minus laborum iste error possimus ipsum?</p>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-success   bi-arrow-right "></button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-xl-4 col-12">
+                <div class="card m-md-0 m-5">
+                    <div class="card-header">
+                        <img src="public/images/speaker.gif" width="100%">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Content marketting</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam
+                            temporibus assumenda tempora maxime minus laborum iste error possimus ipsum?</p>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-success   bi-arrow-right "></button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-xl-4 col-12">
+                <div class="card m-md-0 m-5">
+                    <div class="card-header">
+                        <img src="public/images/seo.gif" width="100%">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">On page seo</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam
+                            temporibus assumenda tempora maxime minus laborum iste error possimus ipsum?</p>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-success   bi-arrow-right "></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- the section ends here -->
+    <section class="sub-section">
+        <div class="background-section">
+            <div class="row container-fluid d-flex justify-content-between ">
+                <div class="col-md-6 col-sm-12 text-center-img">
+                    <img src="public/images/phone.gif" class="w-75 phone-img text-center img-fluid">
+                </div>
+                <div id="product"
+                    class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-start">
+                    <div class="center-img">
+                        <h3 id="product-h3" class="text-white">Steps To Build A
+                            Successful Digital Product
+                        </h3>
+                        <p id="product-para" class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                            ultrices gravi.Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor
+                            sit amet, consectetur adipiscing.</p>
+                        <button id="product-btn" class="btn btn-primary"> Read-more</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- the background section ends here -->
+    <section class="container">
+        <h2>Generating New Customers Via<br>
+            Online Mode</h2>
+        <hr class="w-25 mx-auto">
+        <div class="row mx-auto container">
+            <div class="col-md-6 my-4  col-sm-12">
+                <div class="card ">
+                    <div class="card-body d-lg-flex  d-md-grid d-sm-grid">
+                        <div>
+                            <img class="img-fluid" src="public/images/phone.gif">
+                        </div>
+                        <div>
+                            <h4>Social media awarness</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae debitis nam quibusdam
+                                alias ea facilis esse unde nobis, aspernatur perspiciatis accusamus accusantium commodi
+                                delectus error mollitia repellat ratione porro. Illo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 my-4 col-sm-12">
+                <div class="card">
+                    <div class="card-body d-lg-flex d-md-grid d-sm-grid">
+                        <div>
+                            <img class="img-fluid" src="public/images/phone.gif">
+                        </div>
+                        <div>
+                            <h4>Social media awarness</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae debitis nam quibusdam
+                                alias ea facilis esse unde nobis, aspernatur perspiciatis accusamus accusantium commodi
+                                delectus error mollitia repellat ratione porro. Illo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- slider section starts from here -->
+    <section  class=" bg-dark p-4 my-5">
+        <h2 class="text-white">What Client Say<br>
+            About Us</h2>
+        <hr class="w-25 text-white mx-auto">
+        <div>
+            <div id="carouselExampleIndicators" class="carousel slide">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container d-flex justify-content-evenly">
+                            <div class="card p-2 " style="width: 15rem;">
+                                <img src="public/images/Untitled design.png" class="card-img-top w-100" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container d-flex justify-content-evenly">
+                            <div class="card p-2" style="width: 15rem;">
+                                <img src="public/images/Untitled design.png" class="card-img-top w-100" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container d-flex justify-content-evenly">
+                            <div class="card p-2" style="width: 15rem;">
+                                <img src="public/images/Untitled design.png" class="card-img-top w-100" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-indicator">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="carousel-indicators my-5">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+    <!-- contact us section starts form here -->
+    <section>
+        <div class="curve-background p-5">
+            <div class="custom-shape-divider-top-1708171011">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <h2 class="text-white">Contact-Us</h2>
+            <hr class="w-25 text-white  mx-auto">
+            <div class="container">
+                <form class="row w-auto mx-auto g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </section>
+    <footer class="bg-black">
+        <div class="container py-5">
+            <div class="row text-white">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <h4>Our story</h4>
+                    <p>our story</p>
+                    <p>our story</p>
+                    <p>our story</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <h4>Our story</h4>
+                    <p>our story</p>
+                    <p>our story</p>
+                    <p>our story</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                    <h4>Our story</h4>
+                    <p>our story</p>
+                    <p>our story</p>
+                    <p>our story</p>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                    <div>
+                        <h3>Suscribe to us</h3>
+                    </div>
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control" placeholder="grow your bussiness">
+                        <button class="btn btn-primary">Suscribe</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- footer end -->
+        <hr>
+        <div class="d-flex justify-content-between text-white container pb-4 footer-class">
+            <h6>Copyright ©2024 All rights reserved. | This template is made by Amit Barai</h6>
+            <div>
+                <span class="bi bi-facebook">&nbsp;</span>
+                <span class="bi bi-twitter">&nbsp;</span>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
